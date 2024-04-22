@@ -251,8 +251,13 @@ add_subdirectory (websocketpp)
 
 # Add examples
 if (BUILD_EXAMPLES)
-    include_subdirs ("examples")
+#     include_subdirs ("examples")
+    add_subdirectory(examples/echo_client)
+    add_subdirectory(examples/echo_server)
+    add_subdirectory(examples/utility_client)
 endif ()
+
+
 
 # Add tests
 if (BUILD_TESTS)
